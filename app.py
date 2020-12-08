@@ -112,3 +112,11 @@ while in_session:
                 in_session = False
             else:
                 pass
+    else:
+        print("Sorry, that's not a valid entry")
+        second_chance = input("Would you like to keep going? [y]-yes , [n]-no \n").lower()
+        if second_chance == "n":
+            print(goodbye)
+            in_session = False
+        else:
+            pass
