@@ -1,5 +1,5 @@
 import sqlite3
-from art import logo, goodbye, success
+from art import logo, goodbye, success, deleted
 from sqlite3 import Error
 
 conn = sqlite3.connect('passwords.db')
@@ -96,7 +96,7 @@ while in_session:
         unwanted_id = int(input("Which 'id' would you like to get rid of? \n"))
         results = cur.execute("DELETE FROM passwords WHERE id = ?", (unwanted_id,))
         conn.commit()
-        print('Record deleted')
+        print(deleted)
 
         second_chance = input("Would you like to keep going? [y]-yes , [n]-no \n").lower()
 
