@@ -23,3 +23,35 @@ while in_session:
         if second_chance == "n":
             print(goodbye)
             in_session = False
+    elif option == "q":
+        print(goodbye)
+        in_session = False
+    elif option == "s":
+        print("Let's search for that password")
+        search_option = input("What would you like to search by? Website? Username? or Email? \n").lower()
+        if search_option == 'website':
+            site = input("What's the website? \n")
+            result = cur.execute("SELECT * from passwords WHERE website = ?", (site,))
+            rows = result.fetchall()
+            for row in rows:
+                print(row)
+        elif search_option == 'username':
+            name = input("What's the username you're looking for? \n")
+            result = cur.execute("SELECT * from passwords WHERE username = ?", (name,))
+            rows = result.fetchall()
+            for row in rows:
+                print(row)
+        elif search_option == 'email':
+            email = input("What's the email you're looking for? \n")
+            result = cur.execute("SELECT * from passwords WHERE email = ?", (email,))
+            rows = result.fetchall()
+            for row in rows:
+                print(row)
+        else:
+            print("Sorry, that's not a valid entry. Try again.") 
+        second_chance = input("Would you like to keep going? [y]-yes , [n]-no \n").lower()
+        if second_chance == "n":
+            print(goodbye)
+            in_session = False
+        else:
+            pass
