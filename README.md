@@ -15,3 +15,7 @@ PasswordManagerApp is a fully functional password manager database. Written in P
 | q         | quits the program|
 | s         | searches database on different parameters|
 | u         | allows user to update record in database|
+
+Inspiration for this was simple. I wanted to create something like this and after searching for a tutorial to no success. I decided to take a stab and at and well, here it is.
+
+Created by: Andrew Zamora
