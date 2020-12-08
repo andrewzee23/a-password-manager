@@ -7,6 +7,7 @@ PasswordManagerApp is a fully functional password manager database. Written in P
 1. First, run tables.py to create database and table for passwords.
 2. Run app.py and enjoy.
 
+
 |key        |description|
 |-----------|-----------|
 | a         | populates all records in database|
@@ -16,6 +17,7 @@ PasswordManagerApp is a fully functional password manager database. Written in P
 | s         | searches database on different parameters|
 | u         | allows user to update record in database|
 
+
 Inspiration for this was simple. I wanted to create something like this and after searching for a tutorial to no success. I decided to take a stab and at and well, here it is.
 
-Created by: Andrew Zamora
+**Created by: Andrew Zamora**
