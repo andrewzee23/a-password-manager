@@ -82,3 +82,33 @@ while in_session:
             in_session = False
         else:
             pass
+    elif option == 'u':
+        print("Let's update a record")
+        result = cur.execute("SELECT * from passwords").fetchall()
+        for row in result:
+            print(row)
+        record_id = input("What's the 'id' of the email you want to update? \n")
+        record = input("What would you like to update? [e]-email, [un]-username, [p]-password \n")
+        if record == "e":
+            new_email = input("What's the new email you'd like? \n")
+            conn.execute("UPDATE passwords SET email = ? WHERE id = ?", (new_email, record_id))
+            conn.commit()
+            print("Updated email successfully")
+        elif record == "un":
+            new_username = input("What would you like your new username to be? \n")
+            conn.execute("UPDATE passwords SET username = ? WHERE id = ?", (new_username, record_id))
+            conn.commit()
+            print("Updated username successfully")
+        elif record == "p":
+            new_password = input("What would you like your new password to be? \n")
+            conn.execute("UPDATE passwords SET password = ? WHERE id = ?", (new_password, record_id))
+            conn.commit()
+            print("Updated password successfully")
+        else:
+            print("Sorry, that's not a valid entry")
+            second_chance = input("Would you like to keep going? [y]-yes , [n]-no \n").lower()
+            if second_chance == "n":
+                print(goodbye)
+                in_session = False
+            else:
+                pass
