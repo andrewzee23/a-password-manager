@@ -2,4 +2,7 @@
 
 PasswordManagerApp is a fully functional password manager database. Written in Python 3.7.6 using SQLite as the datebase.
 
-**NO SECUIRTY**.
+**NO SECUIRTY**
+
+1. First, run tables.py, to create database and table for passwords.
+2. Run app.py and enjoy.
