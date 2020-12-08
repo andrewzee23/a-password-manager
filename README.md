@@ -2,4 +2,4 @@
 
 PasswordManagerApp is a fully functional password manager database. Written in Python 3.7.6.
 
-Very basic, no **SECUIRTY**.
+**NO SECUIRTY**.
