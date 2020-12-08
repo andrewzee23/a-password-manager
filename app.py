@@ -55,3 +55,14 @@ while in_session:
             in_session = False
         else:
             pass
+    elif option == "a":
+        print("Show me everything")
+        result = cur.execute("SELECT * from passwords").fetchall()
+        for row in result:
+            print(row)
+        second_chance = input("Would you like to keep going? [y]-yes , [n]-no \n").lower()
+        if second_chance == "n":
+            print(goodbye)
+            in_session = False
+        else:
+            pass
