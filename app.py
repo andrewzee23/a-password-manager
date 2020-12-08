@@ -70,7 +70,7 @@ while in_session:
 
     elif option == "a":
         print("Show me everything")
-        print("ID|WEBSITE|EMAIL|USERNAME|PASSWORD")
+        print("ID|WEBSITE|EMAIL|USERNAME|PASSWORD|")
         result = cur.execute("SELECT * from passwords").fetchall()
 
         for row in result:
@@ -88,6 +88,7 @@ while in_session:
     elif option == 'd':
         print("Let's delete that record")
         print("You can delete the record with the 'id'")
+        print("ID|WEBSITE|EMAIL|USERNAME|PASSWORD|")
         all_records = cur.execute("SELECT * from passwords").fetchall()
 
         for row in all_records:
