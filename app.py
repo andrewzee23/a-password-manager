@@ -66,3 +66,19 @@ while in_session:
             in_session = False
         else:
             pass
+    elif option == 'd':
+        print("Let's delete that record")
+        print("You can delete the record with the 'id'")
+        all_records = cur.execute("SELECT * from passwords").fetchall()
+        for row in all_records:
+            print(row)
+        unwanted_id = int(input("Which 'id' would you like to get rid of? \n"))
+        results = cur.execute("DELETE FROM passwords WHERE id = ?", (unwanted_id,))
+        conn.commit()
+        print('Record deleted')
+        second_chance = input("Would you like to keep going? [y]-yes , [n]-no \n").lower()
+        if second_chance == "n":
+            print(goodbye)
+            in_session = False
+        else:
+            pass
