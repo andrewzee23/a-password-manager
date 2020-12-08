@@ -11,7 +11,7 @@ PasswordManagerApp is a fully functional password manager database. Written in P
 |-----------|-----------|
 | a         | populates all records in database|
 | d         | deletes record using the 'id'|
-| e         | created a new record in the database|
-| q         | quits the session|
+| e         | creates a new record in the database|
+| q         | quits the program|
 | s         | searches database on different parameters|
 | u         | allows user to update record in database|
