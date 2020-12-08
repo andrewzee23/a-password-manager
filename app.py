@@ -70,6 +70,7 @@ while in_session:
 
     elif option == "a":
         print("Show me everything")
+        print("ID|WEBSITE|EMAIL|USERNAME|PASSWORD")
         result = cur.execute("SELECT * from passwords").fetchall()
 
         for row in result:
@@ -144,7 +145,7 @@ while in_session:
 
             else:
                 pass
-            
+
     else:
         print("Sorry, that's not a valid entry")
         second_chance = input("Would you like to keep going? [y]-yes , [n]-no \n").lower()
