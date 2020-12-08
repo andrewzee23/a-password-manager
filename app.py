@@ -1,5 +1,5 @@
 import sqlite3
-from art import logo, goodbye
+from art import logo, goodbye, success
 from sqlite3 import Error
 
 conn = sqlite3.connect('passwords.db')
@@ -18,7 +18,7 @@ while in_session:
         data = (website_name, email, username, user_password)
         cur.execute('''INSERT INTO passwords (website, email, username, password) VALUES (?,?,?,?)''', data)
         conn.commit()
-        print('Success, connection closed.')
+        print(success)
         second_chance = input("Would you like to keep going? [y]-yes , [n]-no \n").lower()
         if second_chance == "n":
             print(goodbye)
